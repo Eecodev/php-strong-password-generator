@@ -1,7 +1,7 @@
 <?php
 include __DIR__ ."/partials/header.php";
 
-if (isset($_GET["password-length"]) && $_GET["password-length"] !== '') {
+if (isset($_GET["pass-length"]) && $_GET["pass-length"] !== '') {
     $password = generatePassword();
 }
 
@@ -12,7 +12,7 @@ if (isset($_GET["password-length"]) && $_GET["password-length"] !== '') {
     <main class="container">
         <?php if (isset($password)){?>
         <div class="alert alert-primary">
-            La tua password è 
+            Your password is
             <span class="fw-bold">
                 <?php echo $password?>
             </span>
@@ -21,18 +21,17 @@ if (isset($_GET["password-length"]) && $_GET["password-length"] !== '') {
         <div id="pw-generator">
             <form class="row g-3" method="GET" action="<?php echo $_SREVER['PHP_SELF']?>">
                 <div class="col-6">
-                    <label for=""></label>
+                    <label for="pass-length">Password Length</label>
                 </div>
                 <div class="col-6">
-                    <input type="number" class="form-control" id="password-length" name="password-length" min="3" max="15">
+                    <input type="number" class="form-control" id="pass-length" name="pass-length" min="3" max="15">
                 </div>
                 <div class="col-4">
-                    <button type="submit" class="btn btn-primary mb-3">Invia</button>
-                    <button type="reset" class="btn btn-dark mb-3">Annulla</button>
+                    <button type="submit" class="btn btn-primary mb-3">Send</button>
+                    <button type="reset" class="btn btn-dark mb-3">Reset</button>
                 </div>
             </form>
         </div>
-
 
     </main>
     

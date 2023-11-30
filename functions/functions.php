@@ -1,7 +1,7 @@
 <?php
 function generatePassword(){
 
-    $passwordLength = $_GET["password-length"];
+    $passwordLength = $_GET["pass-length"];
     $symbols = '!?&%$<>^+-*/()[]{}@#_=';
     $letters = 'qwertyuiopasdfghjklzxcvbnm';
     $upLetters = strtoupper($letters);

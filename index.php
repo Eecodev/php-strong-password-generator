@@ -1,14 +1,23 @@
 <?php
 include __DIR__ ."/partials/header.php";
 
-if (isset($_GET[""]) ) {
+if (isset($_GET["password-length"]) && $_GET["password-length"] !== '') {
+    $password = generatePassword();
+}
 
 
 ?>
 
 
     <main class="container">
-
+        <?php if (isset($password)){?>
+        <div class="alert alert-primary">
+            La tua password è 
+            <span class="fw-bold">
+                <?php echo $password?>
+            </span>
+        </div>
+        <?php }?>
         <div id="pw-generator">
             <form class="row g-3" method="GET" action="<?php echo $_SREVER['PHP_SELF']?>">
                 <div class="col-6">

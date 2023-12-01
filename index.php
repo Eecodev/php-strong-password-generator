@@ -18,7 +18,7 @@ if (isset($_GET["pass-length"]) && $_GET["pass-length"] !== '') {
             </span>
         </div>
         <?php }?>
-        <div id="pw-generator">
+        <div id="generator">
             <form class="row g-3" method="GET" action="<?php echo $_SREVER['PHP_SELF']?>">
                 <div class="col-6">
                     <label for="pass-length">Password Length</label>
@@ -26,9 +26,9 @@ if (isset($_GET["pass-length"]) && $_GET["pass-length"] !== '') {
                 <div class="col-6">
                     <input type="number" class="form-control" id="pass-length" name="pass-length" min="3" max="15">
                 </div>
-                <div class="col-4">
-                    <button type="submit" class="btn btn-primary mb-3">Send</button>
-                    <button type="reset" class="btn btn-dark mb-3">Reset</button>
+                <div class="col-4 ms-3 ">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="reset" class="btn btn-dark">Reset</button>
                 </div>
             </form>
         </div>
